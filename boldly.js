@@ -8,10 +8,18 @@ function boldlyMasterFn(selector, size){
 	[].forEach.call(selector, function(el) {
 		var color = el.style.color;
 		el.style.fontWeight = "bold";
-		var pos1 = size/2;
-		var pos2 = -(size/2);
 		
-		el.style.textShadow = "0px "+(pos1)+"px 0px "+color+", 0px "+(pos2)+"px 0px "+color;
+		var ts = "";
+		for (var i = 1; i < size + 1; i++) {		
+			ts = ts + "0px "+(i/2)+"px 0px "+color+" , 0px "+(-i/2)+"px 0px "+color;
+			//If you change the width it often times looks too fat.
+			//ts = ts + " , "+(i/2)+"px 0px 0px "+color+" , "+(-i/2)+"px 0px 0px "+color;
+			if (i != size) {
+				ts = ts + " , ";
+			}
+		}
+		console.log(ts);
+		el.style.textShadow = ts;
 	});
 }
 
