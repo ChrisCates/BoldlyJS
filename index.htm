@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Boldly.js | Chris Cates</title>
+		<meta name="viewport" content="width=device-width, minimal-ui">
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				<h1>Boldly.js</h1>
+				<h2>by Chris Cates</h2>
+				<h3>
+					<span>
+						<b1>&#60;b1&#62 </b1>
+					</span>
+					<span>
+						<b2>&#60;b2&#62 </b2>
+					</span>
+					<span>
+						<b3>&#60;b3&#62 </b3>
+					</span>
+					<span>
+						<b4>&#60;b4&#62 </b4>
+					</span>
+					<span>
+						<b5>&#60;b5&#62 </b5>
+					</span>
+				</h3>
+				
+				<center>
+					<a target="_blank" href="https://github.com/Chris-Cates/Boldly">
+						<h2>Github.com/Chris-Cates/Boldly</h2>
+					</a>
+				</center>
+			</div>
+			<div class="content">
+				<h2>How it works:</h2>
+				<center>
+					<img src="img/example.png" style="width: 80%;"/>
+				</center>
+				<h2>Download boldly.js and include it:</h2>
+				<h3><a href="boldly.js">boldly.js</a></h3>				
+<pre class="1">
+&#60;script type="text/javascript" src="boldly.js"&#62;&#60;/script&#62;
+</pre>	
+				<h2>Add a boldly supported tag</h2>
+<pre class="1">
+&#60;b1&#62;Boldly&#60;/b1&#62;
+&#60;b2&#62;Boldly&#60;/b2&#62;
+&#60;b3&#62;Boldly&#60;/b3&#62;
+&#60;b4&#62;Boldly&#60;/b4&#62;
+&#60;b5&#62;Boldly&#60;/b5&#62;
+</pre>	
+				<h4>
+					<span>
+						<b1>Boldly</b1>
+					</span>
+					<span>
+						<b2>Boldly</b2>
+					</span>
+					<span>
+						<b3>Boldly</b3>
+					</span>
+					<span>
+						<b4>Boldly</b4>
+					</span>
+					<span>
+						<b5>Boldly</b5>
+					</span>
+				</h4>
+				<p>Due to the nature of some Open Type fonts. &#60;b5&#62; may in fact actually make the text-shadow to appear
+				inconsistent, specifically serif fotns. If you can use font-weight: 100-900; instead. It is highly recommended.</p>
+
+				<h2>Any questions or comments, e-mail me at codeviolet@chriscates.ca</h2>
+				<h2 style="text-align: center;">You can always check out the source on github at:
+					<a target="_blank" href="https://github.com/Chris-Cates/Boldly">
+						github.com/Chris-Cates/Boldly
+					</a>
+				</h2>
+			</div>
+		</div>
+
+		<link rel="stylesheet" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sh.css"/>
+		<script type="text/javascript" src="js/jquery.110.js"></script>
+		<script type="text/javascript" src="js/jquery.transit.js"></script>
+		<script type="text/javascript" src="js/jquery.fittext.js"></script>
+		<script type="text/javascript" src="js/jquery.snippet.min.js"></script>
+		<script type="text/javascript" src="boldly.js"></script>
+ 		<script type="text/javascript">
+		$(document).ready(function() {
+			$('.title h1').fitText(1.25);
+			$('.title h2').fitText(3);
+			$('.title h3').fitText(3);
+			$('.title p').fitText(4);
+			$('.content h2').fitText(2);
+			$('.content h3').fitText(3);
+			$('.content h4').fitText(3.5);
+			$('.content p').fitText(4);
+			
+			$('pre').fitText(5);
+			$("pre.1").snippet("html", {style:'whitengrey'});
+			$("pre.2").snippet("javascript", {style:'whitengrey'});
+
+		});
+		
+
+		</script>
+	</body>
+</html>
